@@ -1,0 +1,23 @@
+{
+  "name": "jquery.kwicks",
+  "main": "jquery.kwicks.js",
+  "version": "2.2.1",
+  "homepage": "https://github.com/heal25/jquery.kwicks",
+  "authors": [
+  ],
+  "description": "A plugin providing sexy sliding panels.",
+  "keywords": [
+    "sliding",
+    "slider",
+    "animation",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.3.0"
+  },
+  "ignore": [
+    "**/.*",
+    "examples"
+  ]
+}
