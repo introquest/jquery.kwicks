@@ -1,5 +1,5 @@
 /*!
- *  Kwicks: Sexy Sliding Panels for jQuery - v2.2.1
+ *  Kwicks: Sexy Sliding Panels for jQuery - v2.2.2
  *  http://devsmash.com/projects/kwicks
  *
  *  Copyright 2013 Jeremy Martin (jmar777)
@@ -8,7 +8,18 @@
  *  http://www.opensource.org/licenses/mit-license.php
  */
 
-(function($) {
+(function (factory) {
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD. Register as an anonymous module.
+		define(['jquery'], factory);
+	} else if (typeof exports === 'object') {
+		// Node/CommonJS style for Browserify
+		module.exports = factory;
+	} else {
+		// Browser globals
+		factory(jQuery);
+	}
+}(function($) {
 
 	/**
 	 *  API methods for the plugin
@@ -719,4 +730,10 @@
 		});
 	};
 
-})(jQuery);
+	return function(container, options) {
+		if (!arguments.length) {
+			throw new Error('Invalid arguments for Kwicks');
+		}
+		return methods.init.apply(arguments[0], Array.prototype.slice.call(arguments, 1));
+	};
+}));

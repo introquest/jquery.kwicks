@@ -1,6 +1,7 @@
 {
-	"name": "Kwicks",
-	"version": "0.0.0-ignored",
+    "name": "jquery.kwicks",
+	"version": "2.2.2",
+  	"main": "index.js",
 	"devDependencies": {
 		"grunt": "~0.4.1",
 		"grunt-contrib-uglify": "~0.2.2",
